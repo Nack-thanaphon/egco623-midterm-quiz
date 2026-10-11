@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 1,
+    "group": 1,
+    "question": "ทำนายว่านักศึกษาจะ “ผ่าน/ไม่ผ่าน” เป็นงานชนิดใด?",
+    "choices": [
+      "Classification",
+      "Regression",
+      "Clustering",
+      "Association"
+    ],
+    "answer": 0,
+    "explanation": "คำตอบเป็นหมวดหมู่หรือ Class จึงเป็น Classification"
+  },
+  {
+    "id": 2,
+    "group": 1,
+    "question": "พยากรณ์ยอดขายเดือนหน้าเป็นจำนวนเงินบาท เป็นงานชนิดใด?",
+    "choices": [
+      "Classification",
+      "Regression",
+      "Clustering",
+      "Anomaly Detection"
+    ],
+    "answer": 1,
+    "explanation": "Target เป็นค่าตัวเลขต่อเนื่อง จึงเป็น Regression"
+  },
+  {
+    "id": 3,
+    "group": 1,
+    "question": "แบ่งลูกค้าเป็นกลุ่มโดยไม่มี Label เดิม เป็นงานชนิดใด?",
+    "choices": [
+      "Regression",
+      "Association",
+      "Clustering",
+      "Classification"
+    ],
+    "answer": 2,
+    "explanation": "การจัดกลุ่มข้อมูลที่ไม่มี Label คือ Clustering"
+  },
+  {
+    "id": 4,
+    "group": 1,
+    "question": "หา “สินค้าที่มักถูกซื้อพร้อมกัน” เป็นงานชนิดใด?",
+    "choices": [
+      "Association",
+      "Regression",
+      "Classification",
+      "Anomaly Detection"
+    ],
+    "answer": 0,
+    "explanation": "การหาสิ่งที่เกิดร่วมกันใน Transaction คือ Association"
+  },
+  {
+    "id": 5,
+    "group": 1,
+    "question": "ตรวจจับ Network traffic ที่ผิดปกติมาก เป็นงานชนิดใด?",
+    "choices": [
+      "Clustering",
+      "Anomaly Detection",
+      "Regression",
+      "Association"
+    ],
+    "answer": 1,
+    "explanation": "เป้าหมายคือหารายการที่ต่างจากพฤติกรรมปกติ"
+  },
+  {
+    "id": 6,
+    "group": 1,
+    "question": "กรุ๊ปเลือด A/B/AB/O เป็นข้อมูลชนิดใด?",
+    "choices": [
+      "Ratio",
+      "Ordinal",
+      "Nominal",
+      "Interval"
+    ],
+    "answer": 2,
+    "explanation": "เป็นชื่อกลุ่มที่ไม่มีลำดับ จึงเป็น Nominal"
+  },
+  {
+    "id": 7,
+    "group": 1,
+    "question": "ระดับความพึงพอใจ น้อย/กลาง/มาก เป็นข้อมูลชนิดใด?",
+    "choices": [
+      "Ordinal",
+      "Nominal",
+      "Ratio",
+      "Interval"
+    ],
+    "answer": 0,
+    "explanation": "เรียงลำดับได้ แต่ช่วงห่างไม่แน่นอน จึงเป็น Ordinal"
+  },
+  {
+    "id": 8,
+    "group": 1,
+    "question": "อุณหภูมิองศาเซลเซียสเป็นข้อมูลชนิดใด?",
+    "choices": [
+      "Ratio",
+      "Interval",
+      "Nominal",
+      "Ordinal"
+    ],
+    "answer": 1,
+    "explanation": "ช่วงห่างเท่ากัน แต่ 0°C ไม่ได้แปลว่าไม่มีอุณหภูมิ จึงเป็น Interval"
+  },
+  {
+    "id": 9,
+    "group": 1,
+    "question": "น้ำหนักเป็นกิโลกรัมเป็นข้อมูลชนิดใด?",
+    "choices": [
+      "Nominal",
+      "Ratio",
+      "Interval",
+      "Ordinal"
+    ],
+    "answer": 1,
+    "explanation": "มีศูนย์แท้และเปรียบเทียบเป็นเท่าได้ จึงเป็น Ratio"
+  },
+  {
+    "id": 10,
+    "group": 1,
+    "question": "ค่าเฉลี่ยของ 2, 4, 6 เท่ากับเท่าไร?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "Mean = (2+4+6)/3 = 4"
+  },
+  {
+    "id": 11,
+    "group": 1,
+    "question": "Median ของข้อมูลเรียงแล้ว 1, 3, 9, 10, 12 คือข้อใด?",
+    "choices": [
+      "3",
+      "6",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "มี 5 ค่า ค่ากลางลำดับที่ 3 คือ 9"
+  },
+  {
+    "id": 12,
+    "group": 1,
+    "question": "Sample Variance ใช้ตัวหารใด?",
+    "choices": [
+      "n",
+      "n−1",
+      "n+1",
+      "√n"
+    ],
+    "answer": 1,
+    "explanation": "Sample Variance หารด้วย n−1"
+  },
+  {
+    "id": 13,
+    "group": 1,
+    "question": "ถ้า Variance = 9 แล้ว Standard Deviation เท่ากับเท่าไร?",
+    "choices": [
+      "3",
+      "4.5",
+      "9",
+      "81"
+    ],
+    "answer": 0,
+    "explanation": "SD = √Variance = √9 = 3"
+  },
+  {
+    "id": 14,
+    "group": 1,
+    "question": "IQR คำนวณอย่างไร?",
+    "choices": [
+      "Q1+Q3",
+      "Q3−Q1",
+      "Max−Min",
+      "Mean−Median"
+    ],
+    "answer": 1,
+    "explanation": "Interquartile Range = Q3−Q1"
+  },
+  {
+    "id": 15,
+    "group": 1,
+    "question": "ใน Decision Tree เส้นทางจาก Root ไป Leaf หนึ่งเส้นแปลงเป็นอะไร?",
+    "choices": [
+      "หนึ่ง IF–THEN rule โดยเชื่อมเงื่อนไขด้วย AND",
+      "หนึ่ง Cluster",
+      "หนึ่งค่า Mean",
+      "หนึ่ง Association rule เท่านั้น"
+    ],
+    "answer": 0,
+    "explanation": "เงื่อนไขตามเส้นทางเดียวกันเชื่อมด้วย AND แล้ว Leaf คือผลลัพธ์"
+  },
+  {
+    "id": 16,
+    "group": 2,
+    "question": "พบ Missing value สิ่งแรกที่ควรทำคืออะไร?",
+    "choices": [
+      "แทนด้วย 0 เสมอ",
+      "ลบทุกแถวทันที",
+      "ตรวจสาเหตุและเลือกวิธีลบหรือ Impute ให้เหมาะสม",
+      "ปล่อยไว้เสมอ"
+    ],
+    "answer": 2,
+    "explanation": "ต้องเข้าใจสาเหตุและผลกระทบก่อนเลือก Remove หรือ Impute"
+  },
+  {
+    "id": 17,
+    "group": 2,
+    "question": "ก่อนลบ Duplicate ควรตรวจอะไรสำคัญที่สุด?",
+    "choices": [
+      "สีของตาราง",
+      "Key ที่เชื่อถือได้",
+      "จำนวนกราฟ",
+      "ชื่อไฟล์"
+    ],
+    "answer": 1,
+    "explanation": "Key ช่วยแยกแถวซ้ำจริงออกจากรายการที่คล้ายกันแต่คนละเหตุการณ์"
+  },
+  {
+    "id": 18,
+    "group": 2,
+    "question": "อายุ = −20 ปี จัดเป็นปัญหา Data Quality แบบใด?",
+    "choices": [
+      "Invalid value",
+      "Duplicate",
+      "Missing",
+      "Noise เท่านั้น"
+    ],
+    "answer": 0,
+    "explanation": "ค่าผิดกฎช่วงหรือ Domain จัดเป็น Invalid"
+  },
+  {
+    "id": 19,
+    "group": 2,
+    "question": "ข้อใดอธิบาย Noise ได้เหมาะสมที่สุด?",
+    "choices": [
+      "ความผิดพลาดสุ่มที่บดบังสัญญาณ",
+      "แถวซ้ำเท่านั้น",
+      "ข้อมูลที่ไม่มี Label",
+      "ค่ามากที่สุดเสมอ"
+    ],
+    "answer": 0,
+    "explanation": "Noise คือความคลาดเคลื่อนสุ่มที่ทำให้เห็นรูปแบบจริงยากขึ้น"
+  },
+  {
+    "id": 20,
+    "group": 2,
+    "question": "หน่วยบางแถวเป็น kg และบางแถวเป็น lb เป็นปัญหาใด?",
+    "choices": [
+      "Inconsistent data",
+      "Missing data",
+      "Closed itemset",
+      "Ordinal data"
+    ],
+    "answer": 0,
+    "explanation": "หน่วยไม่ตรงกันเป็นความไม่สอดคล้อง ต้องแปลงให้เป็นมาตรฐานเดียวกัน"
+  },
+  {
+    "id": 21,
+    "group": 2,
+    "question": "ถ้า x=15, min=10, max=30 ค่า Min–max เท่ากับเท่าไร?",
+    "choices": [
+      "0.20",
+      "0.25",
+      "0.50",
+      "4.00"
+    ],
+    "answer": 1,
+    "explanation": "(15−10)/(30−10) = 5/20 = 0.25"
+  },
+  {
+    "id": 22,
+    "group": 2,
+    "question": "Min–max normalization โดยทั่วไปแมปข้อมูลในช่วงเดิมไปช่วงใด?",
+    "choices": [
+      "[−1,1] เสมอ",
+      "[0,1]",
+      "[0,100] เสมอ",
+      "ไม่มีขอบเขต"
+    ],
+    "answer": 1,
+    "explanation": "สูตรมาตรฐาน (x−min)/(max−min) ให้ค่าช่วง 0 ถึง 1 สำหรับข้อมูลในช่วงเดิม"
+  },
+  {
+    "id": 23,
+    "group": 2,
+    "question": "ถ้า x=70, Mean=60, SD=5 ค่า Z-score เท่ากับเท่าไร?",
+    "choices": [
+      "−2",
+      "0.5",
+      "2",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "z=(70−60)/5=2"
+  },
+  {
+    "id": 24,
+    "group": 2,
+    "question": "Z-score ติดลบหมายความว่าอย่างไร?",
+    "choices": [
+      "ค่าต่ำกว่า Mean",
+      "ข้อมูลผิดเสมอ",
+      "ค่ามากกว่า Max",
+      "Variance ติดลบ"
+    ],
+    "answer": 0,
+    "explanation": "เครื่องหมายลบบอกว่าค่านั้นต่ำกว่า Mean"
+  },
+  {
+    "id": 25,
+    "group": 2,
+    "question": "เหตุผลหลักที่ต้อง Scale ก่อนใช้ Distance คืออะไร?",
+    "choices": [
+      "ทำให้ทุก Label เท่ากัน",
+      "ป้องกันตัวแปรที่หน่วยหรือช่วงใหญ่ครองระยะ",
+      "ทำให้จำนวนแถวเพิ่ม",
+      "เปลี่ยน Nominal เป็น Ratio"
+    ],
+    "answer": 1,
+    "explanation": "ตัวแปรที่มีช่วงใหญ่สามารถครองผลรวมของ Distance ได้"
+  },
+  {
+    "id": 26,
+    "group": 2,
+    "question": "Random sampling หมายถึงอะไร?",
+    "choices": [
+      "แบ่งกลุ่มก่อนทุกครั้ง",
+      "แต่ละระเบียนมีโอกาสถูกเลือกใกล้เคียงกัน",
+      "เลือกเฉพาะ Outlier",
+      "เลือกแถวแรกเท่านั้น"
+    ],
+    "answer": 1,
+    "explanation": "Random sampling ให้โอกาสการเลือกแก่ระเบียนอย่างใกล้เคียงกัน"
+  },
+  {
+    "id": 27,
+    "group": 2,
+    "question": "เมื่อมีกลุ่มส่วนน้อยที่ต้องรักษาสัดส่วน ควรใช้ Sampling แบบใด?",
+    "choices": [
+      "Stratified sampling",
+      "Convenience sampling",
+      "เลือกเฉพาะกลุ่มใหญ่",
+      "ไม่ต้อง Sampling"
+    ],
+    "answer": 0,
+    "explanation": "Stratified sampling แบ่งชั้นและสุ่มภายในแต่ละชั้นเพื่อรักษาสัดส่วน"
+  },
+  {
+    "id": 28,
+    "group": 2,
+    "question": "Feature Selection คืออะไร?",
+    "choices": [
+      "สร้างแถวใหม่",
+      "เลือกคอลัมน์เดิมที่เกี่ยวข้อง",
+      "เพิ่ม Missing value",
+      "เปลี่ยน Target"
+    ],
+    "answer": 1,
+    "explanation": "Selection เก็บ Feature เดิมที่มีประโยชน์และตัดตัวที่ไม่เกี่ยวข้องหรือซ้ำซ้อน"
+  },
+  {
+    "id": 29,
+    "group": 2,
+    "question": "Feature Extraction คืออะไร?",
+    "choices": [
+      "สร้างมิติใหม่จาก Feature เดิม",
+      "ลบทุก Feature",
+      "เลือกเฉพาะ Label",
+      "เรียงแถวข้อมูล"
+    ],
+    "answer": 0,
+    "explanation": "Extraction แปลง Feature เดิมเป็นมิติใหม่ เช่น PCA"
+  },
+  {
+    "id": 30,
+    "group": 2,
+    "question": "ข้อใดเป็นตัวอย่าง Feature Extraction?",
+    "choices": [
+      "PCA",
+      "ลบ Duplicate",
+      "Mean Imputation",
+      "Train/Test split"
+    ],
+    "answer": 0,
+    "explanation": "PCA สร้างแกนหรือ Component ใหม่จาก Feature เดิม"
+  },
+  {
+    "id": 31,
+    "group": 2,
+    "question": "Pearson correlation r มีช่วงค่าใด?",
+    "choices": [
+      "[0,1]",
+      "[−1,1]",
+      "[−∞,∞]",
+      "[0,100]"
+    ],
+    "answer": 1,
+    "explanation": "Pearson r อยู่ระหว่าง −1 ถึง 1"
+  },
+  {
+    "id": 32,
+    "group": 2,
+    "question": "r = 0.90 ควรแปลว่าอย่างไร?",
+    "choices": [
+      "ความสัมพันธ์เชิงเส้นบวกแรง",
+      "ลบแรง",
+      "ไม่มีความสัมพันธ์แน่นอน",
+      "พิสูจน์เหตุและผล"
+    ],
+    "answer": 0,
+    "explanation": "ค่าใกล้ 1 แสดงความสัมพันธ์เชิงเส้นบวกแรง"
+  },
+  {
+    "id": 33,
+    "group": 2,
+    "question": "r = −0.80 ควรแปลว่าอย่างไร?",
+    "choices": [
+      "บวกแรง",
+      "ลบแรง",
+      "อิสระแน่นอน",
+      "ข้อมูลผิด"
+    ],
+    "answer": 1,
+    "explanation": "ค่าใกล้ −1 แสดงความสัมพันธ์เชิงเส้นลบแรง"
+  },
+  {
+    "id": 34,
+    "group": 2,
+    "question": "r ใกล้ 0 หมายถึงอะไร?",
+    "choices": [
+      "ความสัมพันธ์เชิงเส้นอ่อน",
+      "ข้อมูลเหมือนกันทุกค่า",
+      "Causation แรง",
+      "Variance เท่ากับ 1"
+    ],
+    "answer": 0,
+    "explanation": "r ใกล้ 0 บอกว่าความสัมพันธ์เชิงเส้นอ่อน แต่อาจมีความสัมพันธ์ไม่เชิงเส้นได้"
+  },
+  {
+    "id": 35,
+    "group": 2,
+    "question": "ข้อใดถูกต้องเกี่ยวกับ Correlation?",
+    "choices": [
+      "Correlation พิสูจน์ Causation ได้เสมอ",
+      "Correlation ไม่ได้พิสูจน์ Causation",
+      "r ไม่มีค่าติดลบ",
+      "r ใช้กับข้อความโดยตรง"
+    ],
+    "answer": 1,
+    "explanation": "ความสัมพันธ์ไม่เพียงพอที่จะสรุปเหตุและผล"
+  },
+  {
+    "id": 36,
+    "group": 2,
+    "question": "ในสูตร Pearson เครื่องหมาย Σ หมายถึงอะไร?",
+    "choices": [
+      "คำนวณเฉพาะ index แรก",
+      "รวมค่าที่คำนวณทีละ index",
+      "ถอดราก",
+      "หารด้วยจำนวน Class"
+    ],
+    "answer": 1,
+    "explanation": "คำนวณค่าของแต่ละคู่ xi, yi แล้วรวมทุก index"
+  },
+  {
+    "id": 37,
+    "group": 2,
+    "question": "ลำดับงานที่เหมาะสมที่สุดคือข้อใด?",
+    "choices": [
+      "Model→Clean→Inspect",
+      "Inspect→Clean→Transform/Scale→Features→Model→Evaluate",
+      "Evaluate→Missing→Model",
+      "Scale→Collect→Delete"
+    ],
+    "answer": 1,
+    "explanation": "ต้องตรวจและเตรียมข้อมูลก่อนสร้างและประเมินโมเดล"
+  },
+  {
+    "id": 38,
+    "group": 2,
+    "question": "Target เป็นหมวดหมู่ ควรเริ่มพิจารณาโมเดลใด?",
+    "choices": [
+      "Regression",
+      "Classification",
+      "Association",
+      "PCA"
+    ],
+    "answer": 1,
+    "explanation": "Target แบบ Category/Class ใช้ Classification"
+  },
+  {
+    "id": 39,
+    "group": 2,
+    "question": "Target เป็นจำนวนต่อเนื่อง ควรเริ่มพิจารณาโมเดลใด?",
+    "choices": [
+      "Regression",
+      "Classification",
+      "Clustering",
+      "Apriori"
+    ],
+    "answer": 0,
+    "explanation": "Target ตัวเลขต่อเนื่องใช้ Regression"
+  },
+  {
+    "id": 40,
+    "group": 2,
+    "question": "ข้อใดคือ Label หรือ Target?",
+    "choices": [
+      "คอลัมน์คำตอบที่ต้องการทำนาย",
+      "ทุกคอลัมน์ที่ใช้คำนวณระยะ",
+      "หมายเลขแถว",
+      "ชื่อไฟล์"
+    ],
+    "answer": 0,
+    "explanation": "Label/Target คือผลลัพธ์ที่โมเดลต้องเรียนรู้เพื่อทำนาย"
+  },
+  {
+    "id": 41,
+    "group": 2,
+    "question": "OLAP Slice คืออะไร?",
+    "choices": [
+      "เลือกค่าหนึ่งของมิติหนึ่งเพื่อดูชิ้นข้อมูล",
+      "รวมทุกมิติ",
+      "สร้าง Cluster",
+      "คำนวณ Confidence"
+    ],
+    "answer": 0,
+    "explanation": "Slice ตรึงหนึ่งมิติที่ค่าหนึ่ง เช่น Year=2026"
+  },
+  {
+    "id": 42,
+    "group": 2,
+    "question": "OLAP Dice คืออะไร?",
+    "choices": [
+      "เลือกช่วงหรือหลายค่าเพื่อสร้าง Subcube",
+      "เลือกเพียงค่าเดียวเสมอ",
+      "คำนวณ Median",
+      "ลดจำนวน Class"
+    ],
+    "answer": 0,
+    "explanation": "Dice เลือกหลายเงื่อนไขหรือช่วงจากหลายมิติ"
+  },
+  {
+    "id": 43,
+    "group": 2,
+    "question": "Roll-up ทำอะไร?",
+    "choices": [
+      "ลงรายละเอียด",
+      "สรุปขึ้นระดับสูง เช่น วัน→เดือน",
+      "หา Outlier",
+      "สร้าง Rule"
+    ],
+    "answer": 1,
+    "explanation": "Roll-up รวมข้อมูลไปยังระดับที่หยาบหรือสูงกว่า"
+  },
+  {
+    "id": 44,
+    "group": 2,
+    "question": "Drill-down ทำอะไร?",
+    "choices": [
+      "สรุปจากเดือนเป็นปี",
+      "ลงรายละเอียด เช่น ปี→ไตรมาส→เดือน",
+      "Normalize",
+      "รวม Cluster"
+    ],
+    "answer": 1,
+    "explanation": "Drill-down เคลื่อนจากภาพรวมไปสู่รายละเอียด"
+  },
+  {
+    "id": 45,
+    "group": 2,
+    "question": "ROLAP เก็บข้อมูลหลักในรูปแบบใด?",
+    "choices": [
+      "Relational tables",
+      "ภาพ PNG",
+      "ข้อความไม่มีโครงสร้างเท่านั้น",
+      "Centroid"
+    ],
+    "answer": 0,
+    "explanation": "ROLAP ใช้ฐานข้อมูลเชิงสัมพันธ์และตาราง"
+  },
+  {
+    "id": 46,
+    "group": 2,
+    "question": "MOLAP เก็บข้อมูลหลักในรูปแบบใด?",
+    "choices": [
+      "Multidimensional cube",
+      "CSV แถวเดียว",
+      "Decision tree",
+      "Association rule"
+    ],
+    "answer": 0,
+    "explanation": "MOLAP ใช้โครงสร้าง Cube หลายมิติ"
+  },
+  {
+    "id": 47,
+    "group": 2,
+    "question": "ใน Data Cube “เวลา สินค้า จังหวัด” มักทำหน้าที่เป็นอะไร?",
+    "choices": [
+      "Dimensions",
+      "Missing values",
+      "Labels เท่านั้น",
+      "Outliers"
+    ],
+    "answer": 0,
+    "explanation": "เวลา สินค้า และพื้นที่เป็นมิติสำหรับจัดมุมมองข้อมูล"
+  },
+  {
+    "id": 48,
+    "group": 2,
+    "question": "พบ Outlier หนึ่งค่า ควรทำอย่างไร?",
+    "choices": [
+      "ลบทิ้งทันทีเสมอ",
+      "ตรวจสอบก่อน เพราะอาจเป็นข้อผิดพลาดหรือเหตุการณ์สำคัญ",
+      "แทนด้วย 0 เสมอ",
+      "เปลี่ยนเป็นข้อความ"
+    ],
+    "answer": 1,
+    "explanation": "Outlier อาจเป็น Error หรือข้อมูลหายากที่มีคุณค่า จึงต้องตรวจสอบ"
+  },
+  {
+    "id": 49,
+    "group": 2,
+    "question": "ใน Min–max denominator คือข้อใด?",
+    "choices": [
+      "x−min",
+      "max−min",
+      "x−max",
+      "Mean−SD"
+    ],
+    "answer": 1,
+    "explanation": "สูตรคือ (x−min)/(max−min)"
+  },
+  {
+    "id": 50,
+    "group": 2,
+    "question": "ข้อใดถูกต้องเกี่ยวกับ Z-score standardization?",
+    "choices": [
+      "ทุกค่าต้องอยู่ใน [0,1]",
+      "ค่าอาจติดลบหรือมากกว่า 1 ได้",
+      "ทุกค่าต้องเป็นจำนวนเต็ม",
+      "ใช้ได้เฉพาะ Nominal"
+    ],
+    "answer": 1,
+    "explanation": "Z-score วัดจำนวน SD จาก Mean จึงไม่ได้บังคับให้อยู่ใน [0,1]"
+  },
+  {
+    "id": 51,
+    "group": 3,
+    "question": "Support(X→Y) ใช้สูตรใด?",
+    "choices": [
+      "count(X∪Y)/N",
+      "count(X)/count(Y)",
+      "count(Y)/N",
+      "N/count(X∪Y)"
+    ],
+    "answer": 0,
+    "explanation": "Support คือสัดส่วน Transaction ทั้งหมดที่มีทั้ง X และ Y"
+  },
+  {
+    "id": 52,
+    "group": 3,
+    "question": "Confidence(X→Y) ใช้ denominator ใด?",
+    "choices": [
+      "จำนวน Transaction ทั้งหมด",
+      "count(X)",
+      "count(Y)",
+      "count(X∪Y)"
+    ],
+    "answer": 1,
+    "explanation": "Confidence ถามว่าใน Transaction ที่มีฝั่งซ้าย X มีกี่ส่วนที่มี Y ด้วย"
+  },
+  {
+    "id": 53,
+    "group": 3,
+    "question": "Lift(X→Y) คำนวณอย่างไร?",
+    "choices": [
+      "Support/Confidence",
+      "Confidence/Support(Y)",
+      "count(X)/N",
+      "Confidence×N"
+    ],
+    "answer": 1,
+    "explanation": "Lift = Confidence(X→Y) / Support(Y)"
+  },
+  {
+    "id": 54,
+    "group": 3,
+    "question": "มี 8 Transactions และมี X กับ Y ร่วมกัน 2 รายการ Support เท่าไร?",
+    "choices": [
+      "0.20",
+      "0.25",
+      "0.50",
+      "2.00"
+    ],
+    "answer": 1,
+    "explanation": "Support=2/8=0.25"
+  },
+  {
+    "id": 55,
+    "group": 3,
+    "question": "count(X)=4 และ count(X∪Y)=2 แล้ว Confidence(X→Y) เท่าไร?",
+    "choices": [
+      "0.25",
+      "0.50",
+      "1.00",
+      "2.00"
+    ],
+    "answer": 1,
+    "explanation": "Confidence=2/4=0.50"
+  },
+  {
+    "id": 56,
+    "group": 3,
+    "question": "Confidence=0.50 และ Support(Y)=0.25 แล้ว Lift เท่าไร?",
+    "choices": [
+      "0.25",
+      "0.50",
+      "1",
+      "2"
+    ],
+    "answer": 3,
+    "explanation": "Lift=0.50/0.25=2"
+  },
+  {
+    "id": 57,
+    "group": 3,
+    "question": "ทำไม Confidence(X→Y) และ Confidence(Y→X) มักต่างกัน?",
+    "choices": [
+      "ตัวเศษต่างกันเสมอ",
+      "ตัวหารเป็น count ของฝั่งซ้ายคนละตัว",
+      "Support ต่างกันเสมอ",
+      "Lift ไม่มีทิศทาง"
+    ],
+    "answer": 1,
+    "explanation": "ตัวเศษ count(X∪Y) เท่ากัน แต่ denominator เปลี่ยนตามฝั่งซ้าย"
+  },
+  {
+    "id": 58,
+    "group": 3,
+    "question": "ข้อใดสมมาตรเมื่อสลับ X และ Y?",
+    "choices": [
+      "Confidence",
+      "Support ของการเกิดร่วม",
+      "ตัวหาร Confidence",
+      "กฎทั้งหมด"
+    ],
+    "answer": 1,
+    "explanation": "Support ใช้ count(X∪Y)/N จึงเท่ากันทั้งสองทิศ"
+  },
+  {
+    "id": 59,
+    "group": 3,
+    "question": "กฎจะผ่านเกณฑ์เมื่อใด?",
+    "choices": [
+      "Support ผ่านอย่างเดียว",
+      "Confidence ผ่านอย่างเดียว",
+      "ผ่านทั้ง min_sup และ min_conf",
+      "Lift=0"
+    ],
+    "answer": 2,
+    "explanation": "ต้องผ่านทั้ง Support และ Confidence ตามเกณฑ์ที่โจทย์กำหนด"
+  },
+  {
+    "id": 60,
+    "group": 3,
+    "question": "min_sup=0.40 แต่ Support=0.30 ผลเป็นอย่างไร?",
+    "choices": [
+      "ผ่าน",
+      "ไม่ผ่าน",
+      "ต้องดู Mean",
+      "เป็น Maximal เสมอ"
+    ],
+    "answer": 1,
+    "explanation": "Support ต่ำกว่า min_sup จึงไม่ผ่าน"
+  },
+  {
+    "id": 61,
+    "group": 3,
+    "question": "สินค้า A ปรากฏ 3 จาก 4 Transactions ค่า Support(A) เท่าไร?",
+    "choices": [
+      "0.25",
+      "0.50",
+      "0.75",
+      "1.00"
+    ],
+    "answer": 2,
+    "explanation": "Support(A)=3/4=0.75"
+  },
+  {
+    "id": 62,
+    "group": 3,
+    "question": "count(A)=3 และ count(A∪C)=3 ค่า Confidence(A→C) เท่าไร?",
+    "choices": [
+      "0.33",
+      "0.50",
+      "0.75",
+      "1.00"
+    ],
+    "answer": 3,
+    "explanation": "Confidence=3/3=1.00"
+  },
+  {
+    "id": 63,
+    "group": 3,
+    "question": "Lift = 1 หมายถึงอะไร?",
+    "choices": [
+      "สัมพันธ์บวกแรง",
+      "ประมาณว่าเป็นอิสระต่อกัน",
+      "สัมพันธ์ลบแรง",
+      "กฎไม่ Frequent"
+    ],
+    "answer": 1,
+    "explanation": "Lift 1 หมายถึงอัตราเกิดร่วมเท่ากับ baseline แบบอิสระ"
+  },
+  {
+    "id": 64,
+    "group": 3,
+    "question": "Lift > 1 หมายถึงอะไร?",
+    "choices": [
+      "เกิดร่วมมากกว่าที่คาดจากความเป็นอิสระ",
+      "เกิดร่วมน้อยลง",
+      "ไม่มี Transaction",
+      "Support เป็นลบ"
+    ],
+    "answer": 0,
+    "explanation": "Lift มากกว่า 1 แสดง Positive association"
+  },
+  {
+    "id": 65,
+    "group": 3,
+    "question": "Lift < 1 หมายถึงอะไร?",
+    "choices": [
+      "Positive association",
+      "Negative association",
+      "Confidence=1 เสมอ",
+      "Closed itemset"
+    ],
+    "answer": 1,
+    "explanation": "เกิดร่วมกันน้อยกว่าค่าฐานแบบอิสระ"
+  },
+  {
+    "id": 66,
+    "group": 3,
+    "question": "Frequent itemset คืออะไร?",
+    "choices": [
+      "Itemset ที่ Support ถึง min_sup",
+      "Itemset ที่ Confidence=1 เท่านั้น",
+      "ชุดที่ใหญ่ที่สุดเสมอ",
+      "ชุดที่ไม่มี Subset"
+    ],
+    "answer": 0,
+    "explanation": "Frequent พิจารณาจาก Support เทียบ min_sup"
+  },
+  {
+    "id": 67,
+    "group": 3,
+    "question": "ข้อใดเป็น proper superset ของ AC?",
+    "choices": [
+      "A",
+      "C",
+      "AB",
+      "ABC"
+    ],
+    "answer": 3,
+    "explanation": "ABC มีสมาชิก A และ C ครบ พร้อมเพิ่ม B"
+  },
+  {
+    "id": 68,
+    "group": 3,
+    "question": "ทำไม AB ไม่ใช่ Superset ของ AC?",
+    "choices": [
+      "เพราะ AB มีสองตัว",
+      "เพราะ AB ขาด C",
+      "เพราะ A เหมือนกัน",
+      "เพราะ B มากกว่า C"
+    ],
+    "answer": 1,
+    "explanation": "Superset ต้องมีสมาชิกเดิมทุกตัว แต่ AB ไม่มี C"
+  },
+  {
+    "id": 69,
+    "group": 3,
+    "question": "Closed itemset หมายถึงข้อใด?",
+    "choices": [
+      "ไม่มี proper superset ที่มี Support เท่ากัน",
+      "ไม่มี Subset",
+      "ไม่มี proper superset ที่ Frequent",
+      "มี Confidence=1 เสมอ"
+    ],
+    "answer": 0,
+    "explanation": "Closed เปรียบเทียบ Support กับ Superset ที่ใหญ่กว่า"
+  },
+  {
+    "id": 70,
+    "group": 3,
+    "question": "Maximal frequent itemset หมายถึงข้อใด?",
+    "choices": [
+      "ไม่มี proper superset ที่ยัง Frequent",
+      "ไม่มี Superset ที่ Support เท่ากัน",
+      "Support=1 เสมอ",
+      "มีสมาชิกหนึ่งตัว"
+    ],
+    "answer": 0,
+    "explanation": "Maximal ถามว่ามีชุดใหญ่กว่าที่ยัง Frequent หรือไม่"
+  },
+  {
+    "id": 71,
+    "group": 3,
+    "question": "ความต่างหลักของ Closed กับ Maximal คืออะไร?",
+    "choices": [
+      "Closed ดู Support เท่ากัน; Maximal ดูว่ายัง Frequent หรือไม่",
+      "เหมือนกันทุกกรณี",
+      "Closed ใช้ Confidence",
+      "Maximal ใช้ Mean"
+    ],
+    "answer": 0,
+    "explanation": "Closed รักษาข้อมูล Support ส่วน Maximal เก็บเฉพาะขอบบนของชุด Frequent"
+  },
+  {
+    "id": 72,
+    "group": 3,
+    "question": "ตาม Apriori ถ้า X ไม่ Frequent แล้ว Superset ของ X เป็นอย่างไร?",
+    "choices": [
+      "ต้อง Frequent",
+      "ไม่ Frequent",
+      "Support เพิ่มเสมอ",
+      "เป็น Closed เสมอ"
+    ],
+    "answer": 1,
+    "explanation": "Superset ไม่สามารถมี Support มากกว่า Subset จึงไม่ Frequent"
+  },
+  {
+    "id": 73,
+    "group": 3,
+    "question": "ถ้า ABC เป็น Frequent ข้อใดต้องเป็น Frequent ด้วย?",
+    "choices": [
+      "เฉพาะ ABC",
+      "A, B, C, AB, AC และ BC",
+      "ไม่มีชุดใด",
+      "AB เท่านั้น"
+    ],
+    "answer": 1,
+    "explanation": "ทุก Subset ของ Frequent itemset ต้อง Frequent ตาม Apriori"
+  },
+  {
+    "id": 74,
+    "group": 3,
+    "question": "ข้อเสียของการเก็บเฉพาะ Maximal itemsets คืออะไร?",
+    "choices": [
+      "อาจสูญเสียค่า Support ของชุดย่อย",
+      "จำนวนชุดมากที่สุดเสมอ",
+      "ใช้ min_sup ไม่ได้",
+      "ไม่มี Superset"
+    ],
+    "answer": 0,
+    "explanation": "Maximal กระชับแต่ไม่เก็บ Support ของ Frequent subsets ทั้งหมด"
+  },
+  {
+    "id": 75,
+    "group": 3,
+    "question": "count(A∪B)=2 และ count(B)=5 ค่า Confidence(B→A) เท่าไร?",
+    "choices": [
+      "0.20",
+      "0.40",
+      "0.50",
+      "2.50"
+    ],
+    "answer": 1,
+    "explanation": "Confidence(B→A)=2/5=0.40"
+  },
+  {
+    "id": 76,
+    "group": 4,
+    "question": "Manhattan distance คำนวณอย่างไร?",
+    "choices": [
+      "รวมค่าสัมบูรณ์ของผลต่างแต่ละแกน",
+      "รวมกำลังสองแล้วไม่ถอดราก",
+      "คูณพิกัด",
+      "หา Mean"
+    ],
+    "answer": 0,
+    "explanation": "Manhattan = Σ|xi−yi|"
+  },
+  {
+    "id": 77,
+    "group": 4,
+    "question": "Euclidean distance คำนวณอย่างไร?",
+    "choices": [
+      "รวมค่าสัมบูรณ์เท่านั้น",
+      "รากที่สองของผลรวมกำลังสองของผลต่าง",
+      "หา Max เท่านั้น",
+      "หารด้วยจำนวน Cluster"
+    ],
+    "answer": 1,
+    "explanation": "Euclidean = √Σ(xi−yi)²"
+  },
+  {
+    "id": 78,
+    "group": 4,
+    "question": "ระหว่าง (1,2) กับ (4,6) Euclidean distance เท่าไร?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "answer": 2,
+    "explanation": "√((4−1)²+(6−2)²)=√(9+16)=5"
+  },
+  {
+    "id": 79,
+    "group": 4,
+    "question": "ระหว่าง (1,2) กับ (4,6) Manhattan distance เท่าไร?",
+    "choices": [
+      "5",
+      "7",
+      "12",
+      "25"
+    ],
+    "answer": 1,
+    "explanation": "|4−1|+|6−2|=3+4=7"
+  },
+  {
+    "id": 80,
+    "group": 4,
+    "question": "ข้อใดถูกต้องเกี่ยวกับ Distance?",
+    "choices": [
+      "ติดลบได้",
+      "ต้องไม่ติดลบ",
+      "มากสุดคือจุดใกล้สุด",
+      "จุดเดียวกันมีระยะ 1"
+    ],
+    "answer": 1,
+    "explanation": "Distance ไม่ติดลบและจุดเดียวกันมีระยะ 0"
+  },
+  {
+    "id": 81,
+    "group": 4,
+    "question": "เมื่อเทียบจุดเดียวกับหลาย Center ควรเลือก Center ใด?",
+    "choices": [
+      "ระยะมากที่สุด",
+      "ระยะน้อยที่สุด",
+      "หมายเลขน้อยที่สุดเสมอ",
+      "สุ่ม"
+    ],
+    "answer": 1,
+    "explanation": "Center ที่มี Distance ต่ำสุดคือ Center ที่ใกล้ที่สุด"
+  },
+  {
+    "id": 82,
+    "group": 4,
+    "question": "ถ้า Feature หนึ่งมีช่วง 0–1 แต่อีก Feature มีช่วง 0–1,000 ควรทำอะไร?",
+    "choices": [
+      "Scale ก่อน",
+      "ลบ Feature แรก",
+      "ใช้ค่าดิบเสมอ",
+      "เพิ่ม Cluster"
+    ],
+    "answer": 0,
+    "explanation": "Feature ช่วงใหญ่จะครอง Distance จึงควร Normalize/Standardize"
+  },
+  {
+    "id": 83,
+    "group": 4,
+    "question": "ขั้นตอนแรกของ K-means คืออะไร?",
+    "choices": [
+      "เลือก K และ Initial centers",
+      "วาด Dendrogram",
+      "หา Confidence",
+      "หา Itemset"
+    ],
+    "answer": 0,
+    "explanation": "K-means ต้องกำหนดจำนวนกลุ่มและ Center เริ่มต้น"
+  },
+  {
+    "id": 84,
+    "group": 4,
+    "question": "การ Assign จุดใน K-means ทำอย่างไร?",
+    "choices": [
+      "เลือกค่าต่ำสุดในแถวของจุดนั้น",
+      "เลือกค่าต่ำสุดทั้งตาราง",
+      "เลือก Center ที่มีเลขน้อย",
+      "ใช้ Mean ของทุกจุดทันที"
+    ],
+    "answer": 0,
+    "explanation": "เปรียบเทียบระยะทุก Center ภายในแถวเดียวกันแล้วเลือกค่าต่ำสุด"
+  },
+  {
+    "id": 85,
+    "group": 4,
+    "question": "จุด B มีระยะถึง C1=3 และ C2=10 ควรอยู่กลุ่มใด?",
+    "choices": [
+      "C1",
+      "C2",
+      "ทั้งสองกลุ่ม",
+      "บอกไม่ได้"
+    ],
+    "answer": 0,
+    "explanation": "3 น้อยกว่า 10 จึง Assign ไป C1"
+  },
+  {
+    "id": 86,
+    "group": 4,
+    "question": "จุด B มีระยะถึง C1=12 และ C2=7 ควรอยู่กลุ่มใด?",
+    "choices": [
+      "C1",
+      "C2",
+      "กลุ่มใหม่",
+      "บอกไม่ได้"
+    ],
+    "answer": 1,
+    "explanation": "7 น้อยกว่า 12 จึง Assign ไป C2"
+  },
+  {
+    "id": 87,
+    "group": 4,
+    "question": "การ Update centroid ใช้วิธีใด?",
+    "choices": [
+      "หา Mean ของแต่ละพิกัดของสมาชิกในกลุ่ม",
+      "เลือกจุดแรก",
+      "หา Max ทุกแกน",
+      "ใช้ Median เสมอ"
+    ],
+    "answer": 0,
+    "explanation": "Centroid ใหม่คือ coordinate-wise mean ของสมาชิกปัจจุบัน"
+  },
+  {
+    "id": 88,
+    "group": 4,
+    "question": "จุด (1,1) และ (3,2) มี Center ใหม่เท่าไร?",
+    "choices": [
+      "(4,3)",
+      "(2,1.5)",
+      "(1.5,2)",
+      "(3,2)"
+    ],
+    "answer": 1,
+    "explanation": "Mean x=(1+3)/2=2 และ Mean y=(1+2)/2=1.5"
+  },
+  {
+    "id": 89,
+    "group": 4,
+    "question": "K-means มักหยุดเมื่อใด?",
+    "choices": [
+      "Assignment หรือ Center ไม่เปลี่ยนแล้ว",
+      "ครบหนึ่งรอบเสมอ",
+      "Distance เป็นลบ",
+      "ทุกจุดเท่ากัน"
+    ],
+    "answer": 0,
+    "explanation": "เมื่อทำซ้ำแล้วกลุ่มหรือ Center คงที่ถือว่า Converged"
+  },
+  {
+    "id": 90,
+    "group": 4,
+    "question": "เหตุใด K-means อาจได้คำตอบต่างกันในแต่ละครั้ง?",
+    "choices": [
+      "Initial centers ต่างกัน",
+      "สูตร Mean เปลี่ยน",
+      "Distance ติดลบ",
+      "จำนวน Feature เป็นศูนย์"
+    ],
+    "answer": 0,
+    "explanation": "K-means ไวต่อการเริ่มต้นและอาจลงเอยที่คำตอบท้องถิ่นต่างกัน"
+  },
+  {
+    "id": 91,
+    "group": 4,
+    "question": "Agglomerative hierarchical clustering เริ่มต้นอย่างไร?",
+    "choices": [
+      "ทุกจุดเป็น Cluster ของตัวเอง",
+      "ทุกจุดอยู่ Cluster เดียว",
+      "สุ่มครึ่งข้อมูล",
+      "เริ่มจาก Association rule"
+    ],
+    "answer": 0,
+    "explanation": "Agglomerative เริ่มจาก Cluster ย่อยที่สุดแล้วค่อยรวม"
+  },
+  {
+    "id": 92,
+    "group": 4,
+    "question": "ใน Proximity matrix คู่แรกที่ควรรวมคือคู่ใด?",
+    "choices": [
+      "ค่ามากที่สุด",
+      "ค่าต่ำสุดที่ไม่ใช่ศูนย์บนแนวทแยง",
+      "ค่าศูนย์บนแนวทแยง",
+      "คู่สุดท้าย"
+    ],
+    "answer": 1,
+    "explanation": "ระยะต่ำสุดระหว่างคนละจุดคือคู่ที่ใกล้ที่สุด"
+  },
+  {
+    "id": 93,
+    "group": 4,
+    "question": "Single linkage ใช้ระยะใดระหว่างสอง Cluster?",
+    "choices": [
+      "Minimum pair distance",
+      "Maximum pair distance",
+      "Median เท่านั้น",
+      "ระยะจาก Origin"
+    ],
+    "answer": 0,
+    "explanation": "Single linkage เลือกคู่ข้ามกลุ่มที่ใกล้ที่สุด"
+  },
+  {
+    "id": 94,
+    "group": 4,
+    "question": "Complete linkage ใช้ระยะใดระหว่างสอง Cluster?",
+    "choices": [
+      "Minimum",
+      "Maximum pair distance",
+      "Mean ของ Center",
+      "ศูนย์"
+    ],
+    "answer": 1,
+    "explanation": "Complete linkage ใช้คู่ข้ามกลุ่มที่ไกลที่สุด"
+  },
+  {
+    "id": 95,
+    "group": 4,
+    "question": "Group average linkage ใช้อะไร?",
+    "choices": [
+      "ค่าเฉลี่ยของระยะทุกคู่ข้าม Cluster",
+      "ค่าต่ำสุด",
+      "ค่าสูงสุด",
+      "จำนวนสมาชิก"
+    ],
+    "answer": 0,
+    "explanation": "คำนวณระยะของทุกคู่ข้ามกลุ่มแล้วหา Mean"
+  },
+  {
+    "id": 96,
+    "group": 4,
+    "question": "Centroid linkage ใช้อะไร?",
+    "choices": [
+      "ระยะระหว่าง Mean vectors ของ Cluster",
+      "ระยะต่ำสุด",
+      "Support",
+      "จำนวน Leaf"
+    ],
+    "answer": 0,
+    "explanation": "Centroid linkage วัดระหว่างจุดศูนย์กลางของแต่ละ Cluster"
+  },
+  {
+    "id": 97,
+    "group": 4,
+    "question": "Leaf ใน Dendrogram แทนอะไร?",
+    "choices": [
+      "ข้อมูลหรือ Observation เดิม",
+      "ค่า Confidence",
+      "Center ใหม่เท่านั้น",
+      "min_sup"
+    ],
+    "answer": 0,
+    "explanation": "Leaf ด้านล่างคือ Observation เริ่มต้น"
+  },
+  {
+    "id": 98,
+    "group": 4,
+    "question": "ความสูงที่กิ่งรวมกันใน Dendrogram หมายถึงอะไร?",
+    "choices": [
+      "Merge distance ตาม Linkage",
+      "จำนวน Feature",
+      "Mean ของข้อมูลทั้งหมด",
+      "ลำดับไฟล์"
+    ],
+    "answer": 0,
+    "explanation": "แกนตั้งบอกระยะที่ Cluster ถูก Merge"
+  },
+  {
+    "id": 99,
+    "group": 4,
+    "question": "ลากเส้นแนวนอนตัดกิ่งตั้งได้ K กิ่ง จะได้กี่ Cluster?",
+    "choices": [
+      "K Cluster",
+      "K−1 Cluster",
+      "K+1 Cluster",
+      "บอกไม่ได้"
+    ],
+    "answer": 0,
+    "explanation": "จำนวนกิ่งตั้งที่เส้นตัดคือจำนวนกลุ่ม ณ ระดับนั้น"
+  },
+  {
+    "id": 100,
+    "group": 4,
+    "question": "ถ้า d(A,B)=3 และ d(C,D)=2 คู่ใดควรถูกรวมก่อน?",
+    "choices": [
+      "A,B",
+      "C,D",
+      "รวมพร้อมกัน",
+      "ไม่มีคู่ใด"
+    ],
+    "answer": 1,
+    "explanation": "2 เป็นระยะต่ำสุด จึง Merge C และ D ก่อนที่ความสูง 2"
+  }
+]

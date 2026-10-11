@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EGCO623 Data Mining — แบบทดสอบปรนัย 100 ข้อ สุ่มทำครั้งละ 50 ข้อ พร้อมเฉลย" />
+    <title>EGCO623 Data Mining — 50 Question Check</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <strong>EGCO623</strong>
+        <span>DATA MINING · MIDTERM CHECK</span>
+      </div>
+      <small>11 OCT 2026 · 09:00–12:00</small>
+    </header>
+
+    <main>
+      <section id="start" class="screen">
+        <p class="overline">100-QUESTION BANK</p>
+        <h1>เช็กความเข้าใจ<br />ก่อนเข้าห้องสอบ</h1>
+        <p class="intro">สุ่มทำครั้งละ 50 ข้อ ตรวจคำตอบทีละข้อ พร้อมเหตุผลสั้น ๆ เน้นหัวข้อตามสัดส่วนสอบจริง</p>
+
+        <div class="groups" aria-label="สัดส่วนข้อสอบ">
+          <div><b>15</b><span>Data Mining &<br />Exploring Data</span><em>15%</em></div>
+          <div><b>35</b><span>Preprocessing<br />& Models</span><em>35%</em></div>
+          <div><b>25</b><span>Association<br />Rules</span><em>25%</em></div>
+          <div><b>25</b><span>Clustering</span><em>25%</em></div>
+        </div>
+
+        <div class="start-note">
+          <p><b>รอบละ 50 ข้อ</b> — สุ่มใหม่ทุกครั้ง</p>
+          <p><b>มีเฉลยทันที</b> — อ่านเหตุผลก่อนกดข้อต่อไป</p>
+          <p><b>ใช้ปุ่ม 1–4</b> — เลือกคำตอบด้วยคีย์บอร์ดได้</p>
+        </div>
+        <button id="startBtn" class="primary">เริ่มทำ 50 ข้อ</button>
+      </section>
+
+      <section id="quiz" class="screen hidden" aria-live="polite">
+        <div class="quiz-top">
+          <button id="quitBtn" class="text-button">← เริ่มใหม่</button>
+          <span id="progressText">ข้อ 1 / 50</span>
+          <b id="liveScore">ถูก 0</b>
+        </div>
+        <div class="progress"><i id="progressBar"></i></div>
+
+        <article class="question-card">
+          <div class="question-meta">
+            <span id="groupLabel"></span>
+            <em id="groupWeight"></em>
+          </div>
+          <h2 id="questionText"></h2>
+          <div id="choices" class="choices"></div>
+          <div id="feedback" class="feedback hidden"></div>
+          <div class="actions">
+            <button id="checkBtn" class="primary" disabled>ตรวจคำตอบ</button>
+            <button id="nextBtn" class="primary hidden">ข้อต่อไป →</button>
+          </div>
+        </article>
+      </section>
+
+      <section id="result" class="screen hidden">
+        <p class="overline">RESULT</p>
+        <h1 id="scoreText">0 / 50</h1>
+        <p id="scoreMessage" class="intro"></p>
+        <div id="breakdown" class="breakdown"></div>
+        <button id="restartBtn" class="primary">สุ่มทำอีก 50 ข้อ</button>
+        <section class="review-section">
+          <h2>ข้อที่ตอบผิด</h2>
+          <div id="wrongReview" class="wrong-review"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer>คลัง 100 ข้อ · สุ่ม 50 ข้อ · เฉลยพร้อมเหตุผล</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
