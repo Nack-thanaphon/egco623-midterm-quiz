@@ -162,7 +162,7 @@ function renderResult() {
 
 async function init() {
   try {
-    const response = await fetch('questions.json')
+    const response = await fetch('questions.json?v=3')
     bank = await response.json()
     if (bank.length !== 100) throw new Error('Question bank must contain 100 questions')
     $('startBtn').disabled = false
