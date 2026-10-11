@@ -75,15 +75,25 @@ function renderPage() {
 
     const choices = article.querySelector('.choices')
     item.choices.forEach((choice, choiceIndex) => {
-      const button = document.createElement('button')
-      button.className = 'choice'
-      if (selected === choiceIndex) button.classList.add('selected')
-      if (pageChecked && choiceIndex === item.answer) button.classList.add('correct')
-      if (pageChecked && selected === choiceIndex && choiceIndex !== item.answer) button.classList.add('wrong')
-      button.disabled = pageChecked
-      button.innerHTML = `<span>${choiceIndex + 1}</span><b>${choice}</b>`
-      button.addEventListener('click', () => choose(item.id, choiceIndex))
-      choices.appendChild(button)
+      const option = document.createElement('label')
+      option.className = 'choice'
+      if (selected === choiceIndex) option.classList.add('selected')
+      if (pageChecked && choiceIndex === item.answer) option.classList.add('correct')
+      if (pageChecked && selected === choiceIndex && choiceIndex !== item.answer) option.classList.add('wrong')
+
+      const radio = document.createElement('input')
+      radio.type = 'radio'
+      radio.name = `question-${item.id}`
+      radio.value = choiceIndex
+      radio.checked = selected === choiceIndex
+      radio.disabled = pageChecked
+      radio.addEventListener('change', () => choose(item.id, choiceIndex))
+
+      const text = document.createElement('span')
+      text.className = 'choice-text'
+      text.innerHTML = `<b>${choiceIndex + 1}.</b> ${choice}`
+      option.append(radio, text)
+      choices.appendChild(option)
     })
 
     if (pageChecked) {
@@ -162,7 +172,7 @@ function renderResult() {
 
 async function init() {
   try {
-    const response = await fetch('questions.json?v=3')
+    const response = await fetch('questions.json?v=5')
     bank = await response.json()
     if (bank.length !== 100) throw new Error('Question bank must contain 100 questions')
     $('startBtn').disabled = false
