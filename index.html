@@ -30,9 +30,9 @@
         </div>
 
         <div class="start-note">
-          <p><b>รอบละ 50 ข้อ</b> — สุ่มใหม่ทุกครั้ง</p>
-          <p><b>มีเฉลยทันที</b> — อ่านเหตุผลก่อนกดข้อต่อไป</p>
-          <p><b>ใช้ปุ่ม 1–4</b> — เลือกคำตอบด้วยคีย์บอร์ดได้</p>
+          <p><b>5 หน้า × 10 ข้อ</b> — รวมรอบละ 50 ข้อ</p>
+          <p><b>ตรวจทีละหน้า</b> — ตอบครบ 10 ข้อแล้วดูเฉลยพร้อมกัน</p>
+          <p><b>สุ่มใหม่ทุกครั้ง</b> — ครบทุกกลุ่มตามสัดส่วนสอบ</p>
         </div>
         <button id="startBtn" class="primary">เริ่มทำ 50 ข้อ</button>
       </section>
@@ -40,24 +40,17 @@
       <section id="quiz" class="screen hidden" aria-live="polite">
         <div class="quiz-top">
           <button id="quitBtn" class="text-button">← เริ่มใหม่</button>
-          <span id="progressText">ข้อ 1 / 50</span>
+          <span id="progressText">หน้า 1 / 5 · ข้อ 1–10</span>
           <b id="liveScore">ถูก 0</b>
         </div>
         <div class="progress"><i id="progressBar"></i></div>
 
-        <article class="question-card">
-          <div class="question-meta">
-            <span id="groupLabel"></span>
-            <em id="groupWeight"></em>
-          </div>
-          <h2 id="questionText"></h2>
-          <div id="choices" class="choices"></div>
-          <div id="feedback" class="feedback hidden"></div>
-          <div class="actions">
-            <button id="checkBtn" class="primary" disabled>ตรวจคำตอบ</button>
-            <button id="nextBtn" class="primary hidden">ข้อต่อไป →</button>
-          </div>
-        </article>
+        <div id="questionList" class="question-list"></div>
+        <div class="page-actions">
+          <span id="answerStatus">ตอบแล้ว 0 / 10</span>
+          <button id="checkPageBtn" class="primary" disabled>ตรวจ 10 ข้อนี้</button>
+          <button id="nextPageBtn" class="primary hidden">หน้าถัดไป →</button>
+        </div>
       </section>
 
       <section id="result" class="screen hidden">
@@ -73,7 +66,7 @@
       </section>
     </main>
 
-    <footer>คลัง 100 ข้อ · สุ่ม 50 ข้อ · เฉลยพร้อมเหตุผล</footer>
+    <footer>คลัง 100 ข้อ · 5 หน้า × 10 ข้อ · เฉลยพร้อมเหตุผล</footer>
     <script src="app.js"></script>
   </body>
 </html>

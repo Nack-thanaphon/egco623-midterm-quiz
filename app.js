@@ -6,11 +6,12 @@ const groupMeta = {
 }
 
 const attemptCounts = { 1: 8, 2: 17, 3: 13, 4: 12 }
+const pageSize = 10
 let bank = []
 let round = []
-let currentIndex = 0
-let selected = null
-let checked = false
+let pageIndex = 0
+let pageChecked = false
+let answers = {}
 let correctCount = 0
 let records = []
 
@@ -31,84 +32,107 @@ function showScreen(id) {
   window.scrollTo({ top: 0, behavior: 'instant' })
 }
 
+function currentPageQuestions() {
+  const start = pageIndex * pageSize
+  return round.slice(start, start + pageSize)
+}
+
 function createRound() {
   round = Object.entries(attemptCounts).flatMap(([group, count]) =>
     shuffle(bank.filter((question) => question.group === Number(group))).slice(0, count),
   )
   round = shuffle(round)
-  currentIndex = 0
-  selected = null
-  checked = false
+  pageIndex = 0
+  pageChecked = false
+  answers = {}
   correctCount = 0
   records = []
   showScreen('quiz')
-  renderQuestion()
+  renderPage()
 }
 
-function renderQuestion() {
-  const item = round[currentIndex]
-  const meta = groupMeta[item.group]
-  $('progressText').textContent = `ข้อ ${currentIndex + 1} / ${round.length}`
+function renderPage() {
+  const items = currentPageQuestions()
+  const firstNumber = pageIndex * pageSize + 1
+  const lastNumber = firstNumber + items.length - 1
+  $('progressText').textContent = `หน้า ${pageIndex + 1} / ${round.length / pageSize} · ข้อ ${firstNumber}–${lastNumber}`
   $('liveScore').textContent = `ถูก ${correctCount}`
-  $('progressBar').style.width = `${((currentIndex + 1) / round.length) * 100}%`
-  $('groupLabel').textContent = meta.label
-  $('groupWeight').textContent = meta.weight
-  $('questionText').textContent = item.question
-  $('choices').innerHTML = ''
+  $('progressBar').style.width = `${((pageIndex + 1) / (round.length / pageSize)) * 100}%`
 
-  item.choices.forEach((choice, index) => {
-    const button = document.createElement('button')
-    button.className = 'choice'
-    if (selected === index) button.classList.add('selected')
-    if (checked && index === item.answer) button.classList.add('correct')
-    if (checked && selected === index && index !== item.answer) button.classList.add('wrong')
-    button.disabled = checked
-    button.innerHTML = `<span>${index + 1}</span><b>${choice}</b>`
-    button.addEventListener('click', () => choose(index))
-    $('choices').appendChild(button)
+  $('questionList').innerHTML = ''
+  items.forEach((item, localIndex) => {
+    const questionNumber = firstNumber + localIndex
+    const selected = answers[item.id]
+    const meta = groupMeta[item.group]
+    const article = document.createElement('article')
+    article.className = 'question-item'
+    article.innerHTML = `
+      <div class="question-meta"><span>${String(questionNumber).padStart(2, '0')} · ${meta.label}</span><em>${meta.weight}</em></div>
+      <h2>${item.question}</h2>
+      <div class="choices"></div>
+      <div class="feedback hidden"></div>
+    `
+
+    const choices = article.querySelector('.choices')
+    item.choices.forEach((choice, choiceIndex) => {
+      const button = document.createElement('button')
+      button.className = 'choice'
+      if (selected === choiceIndex) button.classList.add('selected')
+      if (pageChecked && choiceIndex === item.answer) button.classList.add('correct')
+      if (pageChecked && selected === choiceIndex && choiceIndex !== item.answer) button.classList.add('wrong')
+      button.disabled = pageChecked
+      button.innerHTML = `<span>${choiceIndex + 1}</span><b>${choice}</b>`
+      button.addEventListener('click', () => choose(item.id, choiceIndex))
+      choices.appendChild(button)
+    })
+
+    if (pageChecked) {
+      const feedback = article.querySelector('.feedback')
+      const isCorrect = selected === item.answer
+      feedback.className = `feedback ${isCorrect ? 'correct' : 'wrong'}`
+      feedback.innerHTML = `<b>${isCorrect ? '✓ ถูกต้อง' : `✕ ยังไม่ถูก — คำตอบคือ ${item.choices[item.answer]}`}</b><p>${item.explanation}</p>`
+    }
+    $('questionList').appendChild(article)
   })
 
-  $('checkBtn').disabled = selected === null
-  $('checkBtn').classList.toggle('hidden', checked)
-  $('nextBtn').classList.toggle('hidden', !checked)
-  $('nextBtn').textContent = currentIndex === round.length - 1 ? 'ดูผลรวม →' : 'ข้อต่อไป →'
+  const answered = items.filter((item) => answers[item.id] !== undefined).length
+  $('answerStatus').textContent = pageChecked ? `ตรวจแล้ว ${items.length} ข้อ` : `ตอบแล้ว ${answered} / ${items.length}`
+  $('checkPageBtn').disabled = answered !== items.length
+  $('checkPageBtn').classList.toggle('hidden', pageChecked)
+  $('nextPageBtn').classList.toggle('hidden', !pageChecked)
+  $('nextPageBtn').textContent = pageIndex === round.length / pageSize - 1 ? 'ดูผลรวม →' : 'หน้าถัดไป →'
+}
 
-  if (!checked) {
-    $('feedback').className = 'feedback hidden'
-    $('feedback').innerHTML = ''
-  } else {
+function choose(questionId, choiceIndex) {
+  if (pageChecked) return
+  answers[questionId] = choiceIndex
+  renderPage()
+}
+
+function checkPage() {
+  const items = currentPageQuestions()
+  if (pageChecked || items.some((item) => answers[item.id] === undefined)) return
+  pageChecked = true
+  for (const item of items) {
+    const selected = answers[item.id]
     const isCorrect = selected === item.answer
-    $('feedback').className = `feedback ${isCorrect ? 'correct' : 'wrong'}`
-    $('feedback').innerHTML = `<b>${isCorrect ? '✓ ถูกต้อง' : `✕ ยังไม่ถูก — คำตอบคือ ${item.choices[item.answer]}`}</b><p>${item.explanation}</p>`
+    if (isCorrect) correctCount += 1
+    records.push({ item, selected, isCorrect })
   }
+  renderPage()
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-function choose(index) {
-  if (checked) return
-  selected = index
-  renderQuestion()
-}
-
-function checkAnswer() {
-  if (selected === null || checked) return
-  checked = true
-  const item = round[currentIndex]
-  const isCorrect = selected === item.answer
-  if (isCorrect) correctCount += 1
-  records.push({ item, selected, isCorrect })
-  renderQuestion()
-}
-
-function nextQuestion() {
-  if (!checked) return
-  if (currentIndex === round.length - 1) {
+function nextPage() {
+  if (!pageChecked) return
+  if (pageIndex === round.length / pageSize - 1) {
     renderResult()
     return
   }
-  currentIndex += 1
-  selected = null
-  checked = false
-  renderQuestion()
+  pageIndex += 1
+  pageChecked = false
+  renderPage()
+  window.scrollTo({ top: 0, behavior: 'instant' })
 }
 
 function renderResult() {
@@ -152,16 +176,7 @@ $('startBtn').disabled = true
 $('startBtn').addEventListener('click', createRound)
 $('restartBtn').addEventListener('click', createRound)
 $('quitBtn').addEventListener('click', () => showScreen('start'))
-$('checkBtn').addEventListener('click', checkAnswer)
-$('nextBtn').addEventListener('click', nextQuestion)
-
-document.addEventListener('keydown', (event) => {
-  if (!$('quiz').classList.contains('hidden') && !checked && ['1', '2', '3', '4'].includes(event.key)) {
-    choose(Number(event.key) - 1)
-  } else if (!$('quiz').classList.contains('hidden') && event.key === 'Enter') {
-    if (checked) nextQuestion()
-    else checkAnswer()
-  }
-})
+$('checkPageBtn').addEventListener('click', checkPage)
+$('nextPageBtn').addEventListener('click', nextPage)
 
 init()
